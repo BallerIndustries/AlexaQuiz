@@ -43,11 +43,10 @@ quizHandlers.Quiz
     Clears out response, counter and quiz_score variables from this.attributes. Effectively clearing the session.
 
 quizHandlers.AskQuestion
-
-
+    Alexa asks a random question about states. Modifies these attributes ["response", "quizitem", "quizproperty", "counter"]
 
 quizHandlers.AnswerIntent
-
+    Determines if your answer is correct. If the counter is < 10, jumps over to AskQuestion. If it's 10 or more, reads out the response and then :responseReady. modifies ['quiz_score', 'response']
 
 quizHandlers.AMAZON.RepeatIntent
 
@@ -85,5 +84,7 @@ quizHandlers.Unhandled
 
 6) What is this.attributes?
     A key/value map containing data you need to persist during the session
+
+7) What are slots?
 
 
